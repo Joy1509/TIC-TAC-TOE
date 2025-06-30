@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #1e1e2f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  color: #f0f4f8;
+}
+
+h1 {
+  font-size: 7vmin;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  color: #f0f4f8;
+}
+
+#winMessage {
+  font-size: 5vmin;
+  margin-bottom: 1rem;
+  color: #a3e635; /* bright lime for success */
+}
+
+.gameContainer {
+  background-color: #2d2d44;
+  border-radius: 30px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.gameScreen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vmin;
+  width: 60vmin;
+  max-width: 90vw;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  font-size: 10vmin;
+  color: #22d3ee; /* default X color */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.5);
+}
+
+/* You can style X and O differently by adding classes dynamically in JS, for example: */
+.box.x {
+  color: #3b82f6; /* vibrant blue for X */
+}
+
+.box.o {
+  color: #f97316; /* bright orange for O */
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #2563eb;
+}
+
+#resetButton, #newGameButton {
+  margin-top: 1rem;
+}
+
+.msg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vmin;
+}
+
+.hide {
+  display: none;
+}
